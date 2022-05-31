@@ -1,0 +1,3 @@
+gurobipy
+pysindy
+pandas
