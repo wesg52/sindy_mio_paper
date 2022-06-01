@@ -1,0 +1,3 @@
+sbatch batchrun_weakform_experiment_lotka.sh
+sbatch batchrun_weakform_experiment_vanderpol.sh
+sbatch batchrun_weakform_experiment_rossler.sh

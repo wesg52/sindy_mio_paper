@@ -332,15 +332,17 @@ if __name__ == '__main__':
         miodf = sysdf.query('Method == "MIOSOS"')
         miodf = miodf.replace({'MIOSOS': 'MIOSR'})
         result_dict['runtime_local_' + system] = pd.concat([result_dict['runtime_local_' + system], miodf])
+    runtime_plots(result_dict, methods=('MIOSR', 'STLSQ', 'SSR', 'SR3'),
+                  prefix='runtime_local', save_name='runtime_local.png')
 
     # Constraint
     result_dict = load_results(['constraint_final_duffing'], clip_prefix=True)
-    noise_duration_grid_plot(result_dict['duffing'], save_name='constraint_final.png')
+    noise_duration_grid_plot(result_dict['duffing'], save_name='constraint.png')
 
     # PDEs
     result_dict = load_results(['pde_final_ks', 'pde_final_redif'], clip_prefix=True)
     methods = ('MIOSR', 'STLSQ', 'SSR', 'SR3', 'E-STLSQ')
-    multi_system_pde_benchmark(result_dict, methods, save_name='pde_final.png')
+    multi_system_pde_benchmark(result_dict, methods, save_name='pde.png')
 
 
 

@@ -1,0 +1,5 @@
+sbatch batchrun_runtime_experiment_hopf.sh
+sbatch batchrun_runtime_experiment_lorenz.sh
+sbatch batchrun_runtime_experiment_mhd.sh
+
+sbatch batchrun_runtime_experiment_order3lib.sh

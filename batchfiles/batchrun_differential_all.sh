@@ -1,0 +1,5 @@
+sbatch batchrun_differential_experiment_hopf.sh
+sbatch batchrun_differential_experiment_lorenz.sh
+sbatch batchrun_differential_experiment_mhd.sh
+
+sbatch batchrun_differential_experiment_smalllib.sh
