@@ -274,6 +274,7 @@ def noise_duration_grid_plot(  # Constraint experiment plot
 
 
 if __name__ == '__main__':
+    plt.rcParams.update({'font.size': 12})
     # Full lib dif
     result_dict = load_results([
         'final_draft_dif_lorenz',

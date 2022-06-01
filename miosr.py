@@ -61,15 +61,9 @@ class MIOSR(BaseOptimizer):
             copy_X=copy_X,
         )
 
-        # if target_sparsity is not None and\
-        #             (target_sparsity <= 0 or not isinstance(target_sparsity, int)) :
-        #     raise ValueError("target_sparsity must be positive int")
-        # if group_sparsity is not None \
-        #         and ([g_sparsity <= 0 or not isinstance(g_sparsity, int)
-        #               for g_sparsity in group_sparsity]) \
-        #         and (target_sparsity is None or sum(group_sparsity) >= target_sparsity):
-        #     raise ValueError("group_sparsity must be tuple of positive integers"
-        #                      "with sum greater than target_sparsity")
+        if target_sparsity is not None and\
+                    (target_sparsity <= 0 or not isinstance(target_sparsity, int)):
+            raise ValueError("target_sparsity must be positive int")
         if constraint_order not in {"target", "feature"}:
             raise ValueError("constraint_order must be one of {'target', 'feature'}")
         if alpha < 0:
